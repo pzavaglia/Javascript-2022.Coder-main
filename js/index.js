@@ -70,6 +70,17 @@ const solicitarInfo = async () => {
             let input = inputCantidad[i]
             input.addEventListener("change", cambioCantidad)
         }
+        const vaciarCarrito = document.createElement("button");
+        vaciarCarrito.className = "btn btn-danger btn-vaciar-carrito";
+        vaciarCarrito.textContent = "Vaciar Carrito";
+        carritoFinal.appendChild(vaciarCarrito);
+
+        vaciarCarrito.addEventListener("click", () => {
+        carrito = [];
+        resetPintarCarrito();
+        actTotalCarrito();
+});
+
     }
 
     function btnComprar() {
@@ -144,6 +155,11 @@ const solicitarInfo = async () => {
     userDireccion.addEventListener("input", function () {
         localStorage.setItem("direccion", userDireccion.value)
     });
+    function resetPintarCarrito() {
+        while (carritoFinal.hasChildNodes()) {
+          carritoFinal.removeChild(carritoFinal.firstChild);
+        }
+      };      
 
 };
 solicitarInfo();
