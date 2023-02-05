@@ -1,0 +1,32 @@
+.menu-grilla {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    margin: 10px 15px 10px 15px;
+
+    .mazoes {
+        @include flex-column;
+
+        .nombre-mazoe {
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media (min-width: 500px) {
+    .menu-grilla {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grilla {
+        display: grid;
+        gap: 2em;
+        column-gap: 2em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

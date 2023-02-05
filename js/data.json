@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name": "mazo0",
+        "precio": 5000,
+        "img": "./img/menu/tarot1.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 1,
+        "name": "mazo1",
+        "precio": 2800,
+        "img": "./img/menu/tarot2.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "name": "mazo2",
+        "precio": 6000,
+        "img": "./img/menu/tarot3.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "name": "mazo3",
+        "precio": 9000,
+        "img": "./img/menu/tarot4.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "name": "mazo4",
+        "precio": 5200,
+        "img": "./img/menu/tarot5.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "name": "mazo5",
+        "precio": 4800,
+        "img": "./img/menu/tarot6.jpg",
+        "cantidad": 1
+    }
+]

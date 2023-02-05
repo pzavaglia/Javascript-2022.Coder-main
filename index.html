@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Tienda Tarot Evolutivo</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler boton-hamburguesa" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./img/logoShop.png" alt="logo" class="logo"></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="menu">
+        <div class="menu-grilla">
+
+        </div>
+
+        <div class="info-carrito">
+            <a class="navbar-brand" href="#"><img src="./img/logoShop.png" alt="logo" class="logo"></a>
+
+            <h2 class="section-header">Carrito de compras</h2>
+            <div class="fila-carrito">
+                <span class="mazo-carrito carrito-header columna-carrito">Mazo</span>
+                <span class="precio-carrito carrito-header columna-carrito">Precio</span>
+                <span class="cantidad-carrito carrito-header columna-carrito">Cantidad</span>
+            </div>
+
+            <div class="mazos-carrito">
+
+            </div>
+            
+            <div class="carrito-total">
+                <div class="total">
+                    <h3 class="carrito-total-title">Total</h3>
+                    <h4 class="carrito-total-precio">$0.00</h4>
+                </div>
+            </div>
+            <section class="formulario">
+                <h2 class="section-header">completar para finalizar su compra</h2>
+                <form action="#" class="formulario-contacto">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" required>
+                    </div>
+                    <div>
+                        <label for="ciudad ">Dirección:</label>
+                        <input type="text" name="ciudad" id="direccion" required>
+                    </div>
+                    
+                </form>
+            </section>
+            <button class="btn btn-primary btn-comprar" type="button">COMPRAR</button>
+
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/data.json"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

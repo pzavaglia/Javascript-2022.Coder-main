@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $fondo1;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav li {
+    background-color: $fondo1;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 1.3em;
+    transition: .5s;
+    text-align: center;
+}
+
+header {
+    background-color: $fondo;
+
+    nav {
+        .container-fluid {
+            .boton-hamburguesa {
+                background-color: $fondo1;
+                border: 3px solid;
+            }
+
+            a {
+                margin-right: 0;
+
+                .logo {
+                    width: 75px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.formulario {
+    @include flex-column;
+    margin-top: 200px;
+
+    .formulario-contacto {
+        @include flex-row;
+        gap: 10px;
+
+        .boton-form {
+            padding: 2px;
+            margin: 5px;
+            transition: .5s;
+            border-radius: 8px;
+            width: 80px;
+        }
+    }
+}
+
+.cantidad-carrito-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right:10px;
+}
+
+.total {
+    @include flex-row;
+    @include margin-gap-padding;
+    border-top: 1px solid black;
+}
+
+footer {
+    margin-top: auto;
+    background-color: $fondo;
+    padding: 0.5em;
+
+    .footer {
+        @include flex-row;
+
+        .texto-footer {
+            @include flex-column;
+            text-align: center;
+            margin: 0.2em;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (min-width: 500px) {
+        .footer {
+            @include flex-column;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.menu {
+
+    .img-mazoe-carrito {
+        width: 75px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+.menu-grilla {
+    img {
+        width: 150px;
+        border: 5px solid $fondo3;
+    }
+}
+
+@media (min-width: 500px) {
+    .menu-grilla img {
+        border: 8px solid $fondo3;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grilla img {
+        width: $desktop;
+        border: 10px solid $fondo3;
+        border-radius: 10px;
+    }
+}
