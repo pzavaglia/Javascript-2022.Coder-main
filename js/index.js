@@ -36,6 +36,12 @@ const solicitarInfo = async () => {
 
         carrito = [...carrito, informacion]
         pintarCarrito();
+        // Añadir SweetAlert después de agregar producto
+        swal({
+            text: "Producto agregado al carrito!",
+            icon: "success",
+            timer: 750,
+        });
     }
 
     const carritoFinal = document.querySelector(".mazos-carrito");
