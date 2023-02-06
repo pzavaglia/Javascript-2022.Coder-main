@@ -25,6 +25,7 @@ const solicitarInfo = async () => {
 
     let carrito = [];
 
+//se crea un objeto con infor, luego lo agrega al arreglo "carrito" si no existe en el carrito.
     function datosProductos(mazo) {
         const informacion = {
             id: mazo.querySelector(".btn").getAttribute("id"),
@@ -33,21 +34,21 @@ const solicitarInfo = async () => {
             precio: mazo.querySelector(".precio-mazo").textContent
         };
     
-        // Verificar si el producto ya existe en el carrito
+// Verificar si el producto ya existe en el carrito
         let productoExistente = carrito.find(mazo => mazo.id === informacion.id);
     
         if (!productoExistente) {
             carrito = [...carrito, informacion];
             pintarCarrito();
     
-            // Mostrar SweetAlert
+// Mostrar SweetAlert
             swal({
                 text: "Producto agregado al carrito!",
                 icon: "success",
                 timer: 750,
             });
         } else {
-            // Mostrar SweetAlert
+// Mostrar SweetAlert
             swal({
                 text: "Este producto ya está en el carrito!",
                 icon: "warning",
@@ -56,7 +57,8 @@ const solicitarInfo = async () => {
         }
     } 
     const carritoFinal = document.querySelector(".mazos-carrito");
-
+       
+//mostrar el contenido del carrito en la página // elimina todos los elementos hijos del contenedor con clase "mazos-carrito"
     function pintarCarrito() {
         resetPintarCarrito();
 
@@ -100,6 +102,7 @@ const solicitarInfo = async () => {
 
     }
 
+//"btnComprar" se llama cuando se hace clic en el botón "Comprar".
     function btnComprar() {
         let nameSaludo = localStorage.getItem("name")
         let correoSaludo = localStorage.getItem("correo")
@@ -118,7 +121,8 @@ const solicitarInfo = async () => {
         }
         actTotalCarrito();
     }
-
+    
+// "actTotalCarrito" actualiza el total del carrito en la página web
     function actTotalCarrito() {
         let contenedorItemCarrito = document.getElementsByClassName("mazos-carrito")[0]
         let filasCarrito = contenedorItemCarrito.getElementsByClassName("fila-carrito")
@@ -134,6 +138,7 @@ const solicitarInfo = async () => {
         document.getElementsByClassName("carrito-total-precio")[0].innerText = "$" + total
     }
 
+//se llama cuando el valor de la cantidad del mazo en el carrito cambia
     function cambioCantidad(e) {
         let input = e.target
         if (isNaN(input.value) || input.value <= 0) {
@@ -142,6 +147,7 @@ const solicitarInfo = async () => {
         actTotalCarrito();
     }
 
+//se llama cuando se hace clic en el botón "Eliminar" para eliminar un mazo del carrito    
     function eliminarItem(e) {
         if (e.target.classList.contains("btn-danger")) {
             let mazoID = e.target.getAttribute("id");
