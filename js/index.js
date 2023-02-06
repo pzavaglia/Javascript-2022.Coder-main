@@ -1,5 +1,4 @@
 const menu = document.querySelector(".menu-grilla");
-
 const solicitarInfo = async () => {
     const response = await fetch('./js/data.json');
     const data = await response.json();
@@ -33,17 +32,29 @@ const solicitarInfo = async () => {
             name: mazo.querySelector(".name-mazo").textContent,
             precio: mazo.querySelector(".precio-mazo").textContent
         };
-
-        carrito = [...carrito, informacion]
-        pintarCarrito();
-        // Añadir SweetAlert después de agregar producto
-        swal({
-            text: "Producto agregado al carrito!",
-            icon: "success",
-            timer: 750,
-        });
-    }
-
+    
+        // Verificar si el producto ya existe en el carrito
+        let productoExistente = carrito.find(mazo => mazo.id === informacion.id);
+    
+        if (!productoExistente) {
+            carrito = [...carrito, informacion];
+            pintarCarrito();
+    
+            // Mostrar SweetAlert
+            swal({
+                text: "Producto agregado al carrito!",
+                icon: "success",
+                timer: 750,
+            });
+        } else {
+            // Mostrar SweetAlert
+            swal({
+                text: "Este producto ya está en el carrito!",
+                icon: "warning",
+                timer: 950,
+            });
+        }
+    } 
     const carritoFinal = document.querySelector(".mazos-carrito");
 
     function pintarCarrito() {
@@ -165,7 +176,7 @@ const solicitarInfo = async () => {
         while (carritoFinal.hasChildNodes()) {
           carritoFinal.removeChild(carritoFinal.firstChild);
         }
-      };      
+      };          
 
 };
 solicitarInfo();
